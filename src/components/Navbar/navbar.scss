@@ -5,4 +5,51 @@
 }
 .navbar {
   background-color: $mainBlack;
+  width: 100%;
+  height: 10vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .logo img {
+  width: 70%;
+}
+
+.navbar .items {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .items .nav-links {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navbar .items .nav-links .nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $mainWhite;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s linear;
+  &:hover {
+    color: $mainGreen;
+  }
+}
+.navbar .items .nav-links .active {
+  color: $mainGreen;
 }
