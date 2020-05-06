@@ -1,18 +1,27 @@
 import React, { Component } from "react";
-import "./tourlist.scss";
+import Tour from "./../Tour/Tour";
 import { tourData } from "../../tourData";
+import "./tourlist.scss";
 
 class TourList extends Component {
   state = {
     tours: tourData,
   };
+
+  removeTour = (id) => {
+    console.log(id);
+  };
+
   render() {
-    console.log(this.state.tours);
+    // console.log(this.state.tours);
+    const { tours } = this.state;
 
     return (
-      <div>
-        <h1>Hello from tourlist</h1>
-      </div>
+      <section className="tourlist">
+        {tours.map((tour) => (
+          <Tour key={tour.id} tour={tour} removeTour={this.removeTour}></Tour>
+        ))}
+      </section>
     );
   }
 }
