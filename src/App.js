@@ -11,7 +11,7 @@ class App extends Component {
       <React.Fragment>
         <Navbar></Navbar>
         <TourList></TourList>
-        <Tour></Tour>
+        {/* <Tour></Tour> */}
       </React.Fragment>
     );
   }
